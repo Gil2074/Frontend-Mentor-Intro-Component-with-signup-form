@@ -1,0 +1,150 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --maiColor: #f97c7b;
+  --secondColor: #5d54a3;
+  --thirdColor: #77e3b4;
+  --fourthColor: #ffdad8;
+  --fifthColor: #37cc8a;
+}
+
+body {
+  background-image: url(./images/bg-intro-mobile.png);
+  background-color: var(--maiColor);
+  font-family: "Poppins", sans-serif;
+}
+body .container {
+  display: grid;
+  grid-template-columns: 300px;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  gap: 3rem;
+}
+body .container .text h1 {
+  color: white;
+  font-size: 1.75rem;
+}
+body .container .text p {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  color: var(--fourthColor);
+}
+body .container .myform > button {
+  background-color: var(--secondColor);
+  color: whitesmoke;
+  padding: 1rem 3.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  text-wrap: wrap;
+  margin-bottom: 1rem;
+}
+body .container .myform > button span {
+  font-weight: bold;
+  color: white;
+}
+body .container .myform form {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+body .container .myform form > *:not(label) {
+  width: 100%;
+  margin: 1rem 0;
+  height: 3rem;
+}
+body .container .myform form input:not([type=submit]) {
+  padding: 1rem;
+}
+body .container .myform form input:not([type=submit])::-moz-placeholder {
+  color: black;
+  font-weight: bold;
+}
+body .container .myform form input:not([type=submit])::placeholder {
+  color: black;
+  font-weight: bold;
+}
+body .container .myform form input:not([type=submit]):focus {
+  outline: transparent;
+}
+body .container .myform form .error {
+  border: solid 2px var(--maiColor);
+  background: url(./images/icon-error.svg) no-repeat 95% 50%;
+  font-weight: bold;
+}
+body .container .myform form input[type=submit] {
+  background-color: var(--fifthColor);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+body .container .myform form p {
+  color: gray;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+body .container .myform form p a {
+  color: var(--maiColor);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+input:not(:focus):not(:-moz-placeholder-shown):invalid {
+  border: 2px solid var(--maiColor);
+  position: relative;
+  color: var(--maiColor);
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+  border: 2px solid var(--maiColor);
+  position: relative;
+  color: var(--maiColor);
+}
+
+.error-text {
+  color: var(--maiColor);
+  display: block;
+  margin-left: auto;
+  text-align: right;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+  color: var(--fifthColor) !important;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url(./images/bg-intro-desktop.png);
+  }
+  body .container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  body .container .text {
+    grid-column: 1/2;
+  }
+  body .container .text h1 {
+    font-size: 2rem;
+  }
+  body .container .myform {
+    grid-column: 2/3;
+  }
+}/*# sourceMappingURL=style.css.map */
