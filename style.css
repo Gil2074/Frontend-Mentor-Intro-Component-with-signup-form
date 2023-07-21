@@ -135,7 +135,9 @@ input:not(:focus):not(:placeholder-shown):invalid {
     background-image: url(./images/bg-intro-desktop.png);
   }
   body .container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: calc(100% - 24rem) 19rem;
+    align-items: center;
+    justify-content: space-around;
     align-items: center;
   }
   body .container .text {
